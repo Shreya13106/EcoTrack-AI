@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR / LEFT HERO -->
+    <div class="hero-panel">
+        <div class="hero-content">
+            <h1>🌍 EcoTrack AI</h1>
+            <p>Track your carbon footprint and build a sustainable future.</p>
+        </div>
+    </div>
+
+    <!-- MAIN DASHBOARD -->
+    <div class="dashboard">
+
+        <!-- TOP BAR -->
+        <div class="topbar">
+            <div class="brand">EcoTrack AI</div>
+
+            <div class="nav">
+                <span class="active">Dashboard</span>
+            </div>
+        </div>
+
+        <!-- GRID CONTENT -->
+        <div class="grid">
+
+            <!-- INPUT CARD -->
+            <div class="card input-card">
+                <h3>Calculate Your Footprint</h3>
+
+                <label>Daily Transport (km)</label>
+                <input id="transport" type="number">
+
+                <label>Monthly Electricity</label>
+                <input id="electricity" type="number">
+
+                <label>Food Preference</label>
+
+                <select id="food">
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="non-vegetarian">Non-Vegetarian</option>
+                </select>
+
+                <button id="calculateBtn">
+                    Calculate Footprint
+                </button>
+
+                <div id="result"></div>
+            </div>
+
+            <!-- METRICS -->
+            <div class="card">
+                <h3>Total Emission</h3>
+                <h2 id="totalEmissionCard">0</h2>
+                <p>kg CO₂ / month</p>
+            </div>
+
+            <div class="card">
+                <h3>Eco Score</h3>
+                <h2 id="ecoScoreCard">--</h2>
+            </div>
+
+            <!-- CHART -->
+            <div class="card chart-card">
+                <h3>Emission Breakdown</h3>
+                <canvas id="emissionChart"></canvas>
+            </div>
+
+            <!-- AI -->
+            <div class="card ai-card">
+                <h3>AI Sustainability Assistant</h3>
+
+
+                <input
+                    type="text"
+                    id="userQuestion"
+                    placeholder="Ask me anything about sustainability..."
+                >
+
+                <button id="askAiBtn">
+                    Ask AI
+                </button>
+
+                <div id="aiResponse"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
