@@ -17,7 +17,7 @@ document.getElementById("calculateBtn")
         document.getElementById("food").value;
 
     const response = await fetch(
-        "http://127.0.0.1:5000/calculate",
+        "https://ecotrack-ai-backend-4sk0.onrender.com/calculate",
         {
             method: "POST",
 
@@ -142,7 +142,7 @@ document.getElementById("askAiBtn")
     try {
 
         const response = await fetch(
-            "http://127.0.0.1:5000/ai",
+            "https://ecotrack-ai-backend-4sk0.onrender.com/ai",
             {
                 method: "POST",
 
